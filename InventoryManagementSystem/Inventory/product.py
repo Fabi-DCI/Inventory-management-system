@@ -73,7 +73,7 @@ Chicken_Nuggets = Product("Chicken Nuggets", "$4.50", 30, "Frozen Food")
 Fish_Sticks = Product("Fish Sticks", "$4.00", 25, "Frozen Food")
 
 
- def get_product_info(self):
+def get_product_info(self):
         """
         Returns a string representation of the product's details.
         """
@@ -89,3 +89,12 @@ Fish_Sticks = Product("Fish Sticks", "$4.00", 25, "Frozen Food")
        #if self.country:
        #    info += f":Country: {self.country}\n"
        #  return info
+
+def change_quantity(self, amount):
+     self.quantity += amount
+     return f"New quantity of {self.name}: ${self.quantity}"
+
+def change_price(self, new_price):
+     self.price = (new_price)
+     return f"New price of {self.name}: ${self.price}"
+
