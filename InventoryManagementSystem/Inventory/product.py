@@ -72,29 +72,40 @@ Frozen_Vegetables = Product("Frozen Vegetables", "$2.50", 60, "Frozen Food")
 Chicken_Nuggets = Product("Chicken Nuggets", "$4.50", 30, "Frozen Food")
 Fish_Sticks = Product("Fish Sticks", "$4.00", 25, "Frozen Food")
 
+def update_quantity(self, new_quantity):
+        """
+        Update the quantity of the product.
+        """
+        if new_quantity >= 0:
+            self.quantity = new_quantity
+        else:
+             print("Quantity cannot be negative.")
+             return 
+
+def update_price(self, new_price):
+        """
+        Update the price of the product.
+        """
+        if new_price >= 0:
+            self.price = new_price
+        else:
+             print("Price cannot be negative.")
+             return
 
 def get_product_info(self):
         """
-        Returns a string representation of the product's details.
+        Return a string representation of the product's information.
         """
-        info = f"Product: {self.name}\n" \
-               f"Price: ${self.price}\n" \
-               f"Quantity: {self.quantity}\n" \
-               f"Category: {self.category}\n"
-        return 
-       #if self.description:      if we choose to give some a supplier/country
-       #    info += f"Description: {self.description}\n"
-       #if self.supplier:
-       #    info += f"Supplier: {self.supplier}\n"
-       #if self.country:
-       #    info += f":Country: {self.country}\n"
-       #  return info
+        return (f"Product: {self.name}, "
+                f"Price: ${self.price:.2f}, "
+                f"Quantity: {self.quantity}")
 
-def change_quantity(self, amount):
-     self.quantity += amount
-     return f"New quantity of {self.name}: ${self.quantity}"
+def get_total_value(self):
+        """
+        Calculate the total value of the product (price * quantity).
+        """
+        return self.price * self.quantity
 
-def change_price(self, new_price):
-     self.price = (new_price)
-     return f"New price of {self.name}: ${self.price}"
+if __name__ == "__main__":
+    main()
 

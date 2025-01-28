@@ -1,0 +1,2 @@
+from Inventory import product
+
