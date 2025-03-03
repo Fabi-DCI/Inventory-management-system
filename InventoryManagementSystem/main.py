@@ -1,5 +1,5 @@
-from product import Product
-from inventory_manager import InventoryManager
+from Inventory.product import Product
+from Inventory.inventory_manager import InventoryManager
 
 def main():
     inventory = InventoryManager()
