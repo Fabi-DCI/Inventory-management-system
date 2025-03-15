@@ -37,23 +37,3 @@ class Product:
         Calculates and returns the total value of the product in stock.
         """
         return self.price * self.quantity
-
-def main():
-    """
-    Demonstrates the usage of the Product class by creating and modifying product instances.
-    """
-    apple = Product("Apple", 0.50, 200, "Fruit")
-    banana = Product("Banana", 0.30, 150, "Fruit")
-    carrot = Product("Carrot", 0.40, 180, "Vegetable")
-
-    print(apple.get_product_info())
-    print(f"Total Value of Apple: ${apple.get_total_value():.2f}")
-    
-    apple.update_price(0.55)
-    apple.update_quantity(250)
-
-    print(apple.get_product_info())
-    print(f"Total Value of Apple: ${apple.get_total_value():.2f}")
-
-if __name__ == "__main__":
-    main()
